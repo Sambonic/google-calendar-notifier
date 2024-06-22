@@ -74,8 +74,8 @@ To begin you have to first setup your credentials file through the following ste
 3. Choose 'OAuth client ID'
 4. Application Type: Desktop, Name: Anything
 5. Press 'Create'
-6. Download the json file and paste it in the ['credentials'](https://github.com/Sambonic/google-calendar-notifier/tree/main/credentials) and the [other 'credentials' folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials)
-7. Run the Calender.exe in the [Calender flder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar)
+6. Download the json file and paste it in the ['credentials'](https://github.com/Sambonic/google-calendar-notifier/tree/main/credentials) and the [other 'credentials'](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials) folder
+7. Run the Calender.exe in the [Calender folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar)
 8. It will ask you to sign in to get to give authorization to the API. Press Continue.
 9. token.json file should be generated in the [other 'credentials' folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials)
 10. Copy it into the other folder and all is set
