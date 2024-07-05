@@ -7,12 +7,27 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
+
 from .paths import TOKEN, CREDENTIALS
 
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
-def auth():
+def get_tokens() -> str:
+  """
+  Get credentials
+  """
+  flow = InstalledAppFlow.from_client_secrets_file(
+      CREDENTIALS, SCOPES
+  )
+  print(f"Flow : {flow}")
+  creds = flow.run_local_server(port=0)
+  print(f"CREDS={creds}")
+  # Save the tokens for the next run
+  with open(TOKEN, "w") as token:
+    token.write(creds.to_json())
+  return creds 
+
+def auth() -> str:
   """
   Shows basic usage of the Google Calendar API.
   Prints the start and name of the next 10 events on the user's calendar.
@@ -24,18 +39,15 @@ def auth():
       creds = Credentials.from_authorized_user_file(TOKEN, SCOPES)
 
     if not creds or not creds.valid:
-      flow = InstalledAppFlow.from_client_secrets_file(
-          CREDENTIALS, SCOPES
-      )
-      print(f"Flow : {flow}")
-      creds = flow.run_local_server(port=0)
-      print(f"CREDS={creds}")
-      # Save the tokens for the next run
-      with open(TOKEN, "w") as token:
-        token.write(creds.to_json())
+      if creds and creds.expired and creds.refresh_token:
+        creds.refresh(Request())
+      else:
+        creds = get_tokens()
 
   except Exception as e:
     print(f"An unexpected error occurred: {e}")
+    creds = get_tokens()
+    return creds
   return creds
 
 def events(title = "Upcoming Events", desc = "")-> Optional[Tuple[str, str]]:
