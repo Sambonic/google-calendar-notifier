@@ -80,34 +80,33 @@ To use the exe file immediately without much coding, follow these steps:
 8. If it ask for conser screen, fill info as presented then return to 'Credentials'
 9. Application Type: Desktop, Name: Anything
 10. Press 'Create'
-11. Download the json file and paste it in the ['credentials' folder here](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials) folder
+11. Download the json file and paste it in the ['credentials' folder here](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials)
 12. Run the Calender.exe in the [Calender folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar)
 13. It will ask you to sign in to get to give authorization to the API. Press Continue.
-14. token.json file should be generated in the [same'credentials' folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials)
+14. token.json file should be generated in the [same 'credentials' folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials)
 15. All it set and done!
 
-I know this ridiculous beyond compare but this documentation is really for me so I don't end up forgetting (again) when things break (again)
+**Note 1:** I know this ridiculous beyond compare but this documentation is really for me so I don't end up forgetting (again) when things break (again)
  
 <a name="build"></a>
 ## Build
 
 To build this from the code, follow these steps:
-1. Do everything from the previous section until step 11 where you paste the
-['credentials' here instead](https://github.com/Sambonic/google-calendar-notifier/tree/main/credentials)
+1. Do everything from the previous section until step 11 where you paste the ['credentials' here instead](https://github.com/Sambonic/google-calendar-notifier/tree/main/credentials)
 2. run the following command in terminal:
    ```bash
    auto-py-to-exe
    ```
-3. Script Location: Point to [Calender.py](https://github.com/Sambonic/google-calendar-notifier/blob/main/Calendar.py)
-4. One Directory.
-5. Console Based. 
-6. Icon: Point to [calender.ico](https://github.com/Sambonic/google-calendar-notifier/blob/main/images/calendar.ico)
-7. Additional files: Put credentials, images, src folders in addition to the 'plyer' library itself
-8. Advanced: enable '-uax-admin'
-9. Press 'Convert .py to .exe'
-10. Run the .exe file and all it set and done!
+4. Script Location: Point to [Calender.py](https://github.com/Sambonic/google-calendar-notifier/blob/main/Calendar.py)
+5. One Directory.
+6. Console Based. 
+7. Icon: Point to [calender.ico](https://github.com/Sambonic/google-calendar-notifier/blob/main/images/calendar.ico)
+8. Additional files: Put credentials, images, src folders in addition to the 'plyer' library itself
+9. Advanced: enable '-uax-admin'
+10. Press 'Convert .py to .exe'
+11. Run the .exe file and all it set and done!
 
-**Note:** Due to the nature of the project, i.e. automatically running commands to setup the task in the background, it may trigger false warnings from windows defender.
+**Note 2:** Due to the nature of the project, i.e. automatically running commands to setup the task in the background, it may trigger false warnings from windows defender.
 
 <a name="limitations"></a>
 ## Limitations
