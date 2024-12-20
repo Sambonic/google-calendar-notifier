@@ -15,6 +15,233 @@
 "description": "Creates and manages builds on Google Cloud Platform.",
 "discoveryVersion": "v1",
 "documentationLink": "https://cloud.google.com/cloud-build/docs/",
+"endpoints": [
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.africa-south1.rep.googleapis.com/",
+"location": "africa-south1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-east1.rep.googleapis.com/",
+"location": "asia-east1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-east2.rep.googleapis.com/",
+"location": "asia-east2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-northeast1.rep.googleapis.com/",
+"location": "asia-northeast1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-northeast2.rep.googleapis.com/",
+"location": "asia-northeast2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-northeast3.rep.googleapis.com/",
+"location": "asia-northeast3"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-south1.rep.googleapis.com/",
+"location": "asia-south1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-south2.rep.googleapis.com/",
+"location": "asia-south2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-southeast1.rep.googleapis.com/",
+"location": "asia-southeast1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.asia-southeast2.rep.googleapis.com/",
+"location": "asia-southeast2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.australia-southeast1.rep.googleapis.com/",
+"location": "australia-southeast1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.australia-southeast2.rep.googleapis.com/",
+"location": "australia-southeast2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-central2.rep.googleapis.com/",
+"location": "europe-central2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-north1.rep.googleapis.com/",
+"location": "europe-north1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-southwest1.rep.googleapis.com/",
+"location": "europe-southwest1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west1.rep.googleapis.com/",
+"location": "europe-west1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west10.rep.googleapis.com/",
+"location": "europe-west10"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west12.rep.googleapis.com/",
+"location": "europe-west12"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west2.rep.googleapis.com/",
+"location": "europe-west2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west3.rep.googleapis.com/",
+"location": "europe-west3"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west4.rep.googleapis.com/",
+"location": "europe-west4"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west6.rep.googleapis.com/",
+"location": "europe-west6"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west8.rep.googleapis.com/",
+"location": "europe-west8"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.europe-west9.rep.googleapis.com/",
+"location": "europe-west9"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.me-central1.rep.googleapis.com/",
+"location": "me-central1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.me-central2.rep.googleapis.com/",
+"location": "me-central2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.me-west1.rep.googleapis.com/",
+"location": "me-west1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.northamerica-northeast1.rep.googleapis.com/",
+"location": "northamerica-northeast1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.northamerica-northeast2.rep.googleapis.com/",
+"location": "northamerica-northeast2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.northamerica-south1.rep.googleapis.com/",
+"location": "northamerica-south1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.southamerica-east1.rep.googleapis.com/",
+"location": "southamerica-east1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.southamerica-west1.rep.googleapis.com/",
+"location": "southamerica-west1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-central1.rep.googleapis.com/",
+"location": "us-central1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-central2.rep.googleapis.com/",
+"location": "us-central2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-east1.rep.googleapis.com/",
+"location": "us-east1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-east10.rep.googleapis.com/",
+"location": "us-east10"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-east4.rep.googleapis.com/",
+"location": "us-east4"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-east5.rep.googleapis.com/",
+"location": "us-east5"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-east7.rep.googleapis.com/",
+"location": "us-east7"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-south1.rep.googleapis.com/",
+"location": "us-south1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-west1.rep.googleapis.com/",
+"location": "us-west1"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-west2.rep.googleapis.com/",
+"location": "us-west2"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-west3.rep.googleapis.com/",
+"location": "us-west3"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-west4.rep.googleapis.com/",
+"location": "us-west4"
+},
+{
+"description": "Regional Endpoint",
+"endpointUrl": "https://cloudbuild.us-west8.rep.googleapis.com/",
+"location": "us-west8"
+}
+],
 "fullyEncodeReservedExpansion": true,
 "icons": {
 "x16": "http://www.google.com/images/icons/product/search-16.gif",
@@ -785,7 +1012,7 @@
 "operations": {
 "methods": {
 "cancel": {
-"description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+"description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.",
 "flatPath": "v2/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}:cancel",
 "httpMethod": "POST",
 "id": "cloudbuild.projects.locations.operations.cancel",
@@ -844,7 +1071,7 @@
 }
 }
 },
-"revision": "20240531",
+"revision": "20241210",
 "rootUrl": "https://cloudbuild.googleapis.com/",
 "schemas": {
 "AuditConfig": {
@@ -1736,7 +1963,7 @@
 "type": "string"
 },
 "cancelRequested": {
-"description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have been cancelled successfully have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+"description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have been cancelled successfully have google.longrunning.Operation.error value with a google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.",
 "readOnly": true,
 "type": "boolean"
 },
@@ -1806,12 +2033,14 @@
 "enum": [
 "TYPE_UNSPECIFIED",
 "STRING",
-"ARRAY"
+"ARRAY",
+"OBJECT"
 ],
 "enumDescriptions": [
 "Default enum type; should not be used.",
 "Default",
-"Arrary type."
+"Array type.",
+"Object type."
 ],
 "type": "string"
 }
@@ -1829,6 +2058,13 @@
 },
 "type": "array"
 },
+"objectVal": {
+"additionalProperties": {
+"type": "string"
+},
+"description": "Optional. Value of the parameter if type is object.",
+"type": "object"
+},
 "stringVal": {
 "description": "Value of the parameter if type is string.",
 "type": "string"
@@ -1838,12 +2074,14 @@
 "enum": [
 "TYPE_UNSPECIFIED",
 "STRING",
-"ARRAY"
+"ARRAY",
+"OBJECT"
 ],
 "enumDescriptions": [
 "Default enum type; should not be used.",
 "Default",
-"Array type"
+"Array type",
+"Object type"
 ],
 "type": "string"
 }
@@ -1855,8 +2093,7 @@
 "id": "PipelineRef",
 "properties": {
 "name": {
-"deprecated": true,
-"description": "Name of the Pipeline.",
+"description": "Optional. Name of the Pipeline.",
 "type": "string"
 },
 "params": {
@@ -1873,14 +2110,16 @@
 "BUNDLES",
 "GCB_REPO",
 "GIT",
-"DEVELOPER_CONNECT"
+"DEVELOPER_CONNECT",
+"DEFAULT"
 ],
 "enumDescriptions": [
 "Default enum type; should not be used.",
 "Bundles resolver. https://tekton.dev/docs/pipelines/bundle-resolver/",
 "GCB repo resolver.",
 "Simple Git resolver. https://tekton.dev/docs/pipelines/git-resolver/",
-"Developer Connect resolver."
+"Developer Connect resolver.",
+"Default resolver."
 ],
 "type": "string"
 }
@@ -2500,8 +2739,7 @@
 "type": "string"
 },
 "secretVersion": {
-"description": "Output only. Resource name of the SecretVersion. In format: projects/*/secrets/*/versions/*",
-"readOnly": true,
+"description": "Optional. Resource name of the SecretVersion. In format: projects/*/secrets/*/versions/*",
 "type": "string"
 }
 },
@@ -2512,6 +2750,7 @@
 "id": "Security",
 "properties": {
 "privilegeMode": {
+"deprecated": true,
 "description": "Optional. Privilege mode.",
 "enum": [
 "PRIVILEGE_MODE_UNSPECIFIED",
@@ -2723,6 +2962,20 @@
 "description": "Name of the container specified as a DNS_LABEL.",
 "type": "string"
 },
+"onError": {
+"description": "Optional. OnError defines the exiting behavior on error can be set to [ continue | stopAndFail ]",
+"enum": [
+"ON_ERROR_TYPE_UNSPECIFIED",
+"STOP_AND_FAIL",
+"CONTINUE"
+],
+"enumDescriptions": [
+"Default enum type; should not be used.",
+"StopAndFail indicates exit if the step/task exits with non-zero exit code",
+"Continue indicates continue executing the rest of the steps/tasks irrespective of the exit code"
+],
+"type": "string"
+},
 "params": {
 "description": "Optional. Optional parameters passed to the StepAction.",
 "items": {
@@ -2783,14 +3036,16 @@
 "BUNDLES",
 "GCB_REPO",
 "GIT",
-"DEVELOPER_CONNECT"
+"DEVELOPER_CONNECT",
+"DEFAULT"
 ],
 "enumDescriptions": [
 "Default enum type; should not be used.",
 "Bundles resolver. https://tekton.dev/docs/pipelines/bundle-resolver/",
 "GCB repo resolver.",
 "Simple Git resolver. https://tekton.dev/docs/pipelines/git-resolver/",
-"Developer Connect resolver."
+"Developer Connect resolver.",
+"Default resolver."
 ],
 "type": "string"
 }
@@ -2823,8 +3078,7 @@
 "id": "TaskRef",
 "properties": {
 "name": {
-"deprecated": true,
-"description": "Name of the task.",
+"description": "Optional. Name of the task.",
 "type": "string"
 },
 "params": {
@@ -2841,14 +3095,16 @@
 "BUNDLES",
 "GCB_REPO",
 "GIT",
-"DEVELOPER_CONNECT"
+"DEVELOPER_CONNECT",
+"DEFAULT"
 ],
 "enumDescriptions": [
 "Default enum type; should not be used.",
 "Bundles resolver. https://tekton.dev/docs/pipelines/bundle-resolver/",
 "GCB repo resolver.",
 "Simple Git resolver. https://tekton.dev/docs/pipelines/git-resolver/",
-"Developer Connect resolver."
+"Developer Connect resolver.",
+"Default resolver."
 ],
 "type": "string"
 }

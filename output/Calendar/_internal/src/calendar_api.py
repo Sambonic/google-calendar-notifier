@@ -13,79 +13,93 @@ from .paths import TOKEN, CREDENTIALS
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 def get_tokens() -> str:
-  """
-  Get credentials
-  """
-  flow = InstalledAppFlow.from_client_secrets_file(
-      CREDENTIALS, SCOPES
-  )
-  print(f"Flow : {flow}")
-  creds = flow.run_local_server(port=0)
-  print(f"CREDS={creds}")
-  # Save the tokens for the next run
-  with open(TOKEN, "w") as token:
-    token.write(creds.to_json())
-  return creds 
+    """
+    Get credentials
+    """
+    print("Getting new token!")
+    flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS, SCOPES)
+    print(f"Flow : {flow}")
+    creds = flow.run_local_server(port=0)
+    print(f"CREDS={creds}")
+    # Save the tokens for the next run
+    with open(TOKEN, "w") as token:
+        token.write(creds.to_json())
+
+    return creds 
 
 def auth() -> str:
-  """
-  Shows basic usage of the Google Calendar API.
-  Prints the start and name of the next 10 events on the user's calendar.
-  """
-  try:
+    """
+    Authenticate Google Calendar API
+    """
     creds = None
+    try:
+        if os.path.exists(TOKEN):
+            print("Token path exists!")
+            creds = Credentials.from_authorized_user_file(TOKEN, SCOPES)
+            
+        if not creds or not creds.valid:
+            print("Token Expired")
+            if creds and creds.expired and creds.refresh_token:
+                print("Refreshing expired credentials...")
+                creds.refresh(Request())
+            else:
+                print("Getting new credentials...")
+                creds = get_tokens()
 
-    if os.path.exists(TOKEN):
-      creds = Credentials.from_authorized_user_file(TOKEN, SCOPES)
+            with open(TOKEN, "w") as token:
+                token.write(creds.to_json())
 
-    if not creds or not creds.valid:
-      if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
-      else:
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
         creds = get_tokens()
-
-  except Exception as e:
-    print(f"An unexpected error occurred: {e}")
-    creds = get_tokens()
+        with open(TOKEN, "w") as token:
+            token.write(creds.to_json())
+    
     return creds
-  return creds
 
-def events(title = "Upcoming Events", desc = "")-> Optional[Tuple[str, str]]:
-  try:
-    service = build("calendar", "v3", credentials=auth())
-
-    # Call the Calendar API
-    now = datetime.datetime.utcnow().isoformat() + "Z"
-    events_result = (
-        service.events()
-        .list(
-            calendarId="primary",
-            timeMin=now,
-            maxResults=10,
-            singleEvents=True,
-            orderBy="startTime",
+def events(title="Upcoming Events", desc="") -> Optional[Tuple[str, str]]:
+    """
+    Call Google Calendar API to gather the events.
+    """
+    try:
+        service = build("calendar", "v3", credentials=auth())
+        now = datetime.datetime.now().isoformat() + "Z"
+        events_result = (
+            service.events()
+            .list(
+                calendarId="primary",
+                timeMin=now,
+                maxResults=10,
+                singleEvents=True,
+                orderBy="startTime",
+            )
+            .execute()
         )
-        .execute()
-    )
-    events = events_result.get("items", [])
-    if not events:
-      print("No upcoming events found.")
-      return
+        events = events_result.get("items", [])
+        if not events:
+            print("No upcoming events found.")
+            return
 
-    title = "Upcoming Events"
-    desc = ""
-    for i, event in enumerate(events):
-      start = event["start"].get("dateTime", event["start"].get("date"))
-      if start == datetime.date.today():
-        title = "Today's Events"
-      try:
-        event_desc = f"{start}, {event["summary"]}, {event["description"]}\n"
-      except KeyError as error:
-        event_desc = f"{start}, {event["summary"]}\n"
-      desc += event_desc
+        seen_summaries = set()
+        for event in events:
+            summary = event.get('summary', 'No Title')
+            if summary in seen_summaries:
+                continue
+            seen_summaries.add(summary)
+            
+            start = event["start"].get("dateTime", event["start"].get("date"))
+            if start == datetime.date.today().isoformat():
+                title = "Today's Events"
+            
+            try:
+                event_desc = f"{start} | {summary} | {event.get('description', '')}"[:48] +"\n"
+            except KeyError as error:
+                event_desc = f"{start} | {summary} | "[:48] +"\n"
+            desc += event_desc
 
-  except Exception as e:
-    print(f"An unexpected error occurred: {e}")
-    sys.exit()
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        sys.exit()
 
-  return title, desc
+    print("Successfully Gathered Events!")
+    return title, desc
