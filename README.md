@@ -1,8 +1,8 @@
 # Google Calendar Notifier
 
-Tl;dr: if you're tired of forgetting events you wrote in your google calendar and you're a heavy pc user, this solves the problem (or helps avoid addressing the actual problem of forgetting)
+Tl;dr: if you're tired of forgetting events you wrote in your google calendar and you're a heavy pc user, this solves the problem (or helps avoid addressing the actual problems in your life)
 
-#### Last Updated: June 23rd, 2024
+#### Last Updated: December 20th, 2024
 
 ## Table of Contents
 
@@ -10,8 +10,9 @@ Tl;dr: if you're tired of forgetting events you wrote in your google calendar an
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Limitations](#limitations)
-6. [Why?](#why)
+5. [Build](#build)
+6. [Limitations](#limitations)
+7. [Why?](#why)
 
 <a name="introduction"></a>
 ## Introduction
@@ -67,18 +68,44 @@ Follow these steps to set up the environment and run the application:
 <a name="usage"></a>
 ## Usage
 
-To begin you have to first setup your credentials file through the following steps:
+To use the exe file immediately without much coding, follow these steps:
 
-1. Visit https://console.cloud.google.com/apis/credentials
-2. Press 'Create Credentials' button
-3. Choose 'OAuth client ID'
-4. Application Type: Desktop, Name: Anything
-5. Press 'Create'
-6. Download the json file and paste it in the ['credentials'](https://github.com/Sambonic/google-calendar-notifier/tree/main/credentials) and the [other 'credentials'](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials) folder
-7. Run the Calender.exe in the [Calender folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar)
-8. It will ask you to sign in to get to give authorization to the API. Press Continue.
-9. token.json file should be generated in the [other 'credentials' folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials)
-10. Copy it into the other folder and all is set
+1. Visit https://console.cloud.google.com/
+2. Press 'APIs and Services' button
+3. Click 'Library' button on the left.
+4. Search for 'Google Calendar API' and enable it
+5. Go back and click 'Credentials'
+6. Press 'Create Credentials' button
+7. Choose 'OAuth client ID'
+8. If it ask for conser screen, fill info as presented then return to 'Credentials'
+9. Application Type: Desktop, Name: Anything
+10. Press 'Create'
+11. Download the json file and paste it in the ['credentials' folder here](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials) folder
+12. Run the Calender.exe in the [Calender folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar)
+13. It will ask you to sign in to get to give authorization to the API. Press Continue.
+14. token.json file should be generated in the [same'credentials' folder](https://github.com/Sambonic/google-calendar-notifier/tree/main/output/Calendar/_internal/credentials)
+15. All it set and done!
+
+I know this ridiculous beyond compare but this documentation is really for me so I don't end up forgetting (again) when things break (again)
+ 
+<a name="build"></a>
+## Build
+
+To build this from the code, follow these steps:
+1. Do everything from the previous section until step 11 where you paste the
+['credentials' here instead](https://github.com/Sambonic/google-calendar-notifier/tree/main/credentials)
+2. run the following command in terminal:
+   ```bash
+   auto-py-to-exe
+   ```
+3. Script Location: Point to [Calender.py](https://github.com/Sambonic/google-calendar-notifier/blob/main/Calendar.py)
+4. One Directory.
+5. Console Based. 
+6. Icon: Point to [calender.ico](https://github.com/Sambonic/google-calendar-notifier/blob/main/images/calendar.ico)
+7. Additional files: Put credentials, images, src folders in addition to the 'plyer' library itself
+8. Advanced: enable '-uax-admin'
+9. Press 'Convert .py to .exe'
+10. Run the .exe file and all it set and done!
 
 **Note:** Due to the nature of the project, i.e. automatically running commands to setup the task in the background, it may trigger false warnings from windows defender.
 
