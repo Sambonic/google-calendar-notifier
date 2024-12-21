@@ -2,7 +2,7 @@
 
 Tl;dr: if you're tired of forgetting events you wrote in your google calendar and you're a heavy pc user, this solves the problem (or helps avoid addressing the actual problems in your life)
 
-#### Last Updated: December 20th, 2024
+#### Last Updated: December 21st, 2024
 
 ## Table of Contents
 
