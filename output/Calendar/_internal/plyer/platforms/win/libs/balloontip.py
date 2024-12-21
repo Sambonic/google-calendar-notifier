@@ -145,7 +145,7 @@ class WindowsBalloonTip:
         Clean visible parts of the notification object, then free all resources
         allocated for creating the nofitication Window and icon.
         '''
-        self.remove_notify()
+        #self.remove_notify()
         if self._hicon is not None:
             win_api_defs.DestroyIcon(self._hicon)
         if self._wnd_class_ex is not None:

@@ -14,9 +14,9 @@ def notify() -> None:
         notification.notify(
             title=title[:64],
             message=desc[:256],
-            app_name="Calendar",
+            app_name="CalendarAPPP",
             app_icon=ICON,
-            timeout=10)
+            timeout=None)
         
         print("Notification displayed successfully!")
     except Exception as e:

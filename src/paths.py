@@ -57,7 +57,7 @@ CREDENTIALS = check_path_exists(os.path.join(parent_dir, "credentials", "credent
 if getattr(sys, 'frozen', False):
     exe_path = sys.executable
 else:
-    exe_path = check_path_exists(os.path.join(parent_dir, "output", "Calendar", "Calendar.exe"), is_file=True)
+    exe_path = check_path_exists(os.path.join(parent_dir, "output", "Calendar", "Calendar.exe"))
 
 EXE = get_short_path(exe_path).replace("\\", "/")
 

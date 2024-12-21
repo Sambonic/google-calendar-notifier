@@ -97,14 +97,14 @@ To build this from the code, follow these steps:
    ```bash
    auto-py-to-exe
    ```
-4. Script Location: Point to [Calender.py](https://github.com/Sambonic/google-calendar-notifier/blob/main/Calendar.py)
-5. One Directory.
-6. Console Based. 
-7. Icon: Point to [calender.ico](https://github.com/Sambonic/google-calendar-notifier/blob/main/images/calendar.ico)
-8. Additional files: Put credentials, images, src folders in addition to the 'plyer' library itself
-9. Advanced: enable '-uax-admin'
-10. Press 'Convert .py to .exe'
-11. Run the .exe file and all it set and done!
+3. Script Location: Point to [Calender.py](https://github.com/Sambonic/google-calendar-notifier/blob/main/Calendar.py)
+4. One Directory or One File (Depends if you want exe + directory or one clean exe file)
+5. Console Based or Window Based (Hide cmd)
+6. Icon: Point to [calender.ico](https://github.com/Sambonic/google-calendar-notifier/blob/main/images/calendar.ico)
+7. Additional files: Put credentials, images, src folders in addition to the 'plyer' library itself
+8. Advanced: enable '-uax-admin'
+9. Press 'Convert .py to .exe'
+10. Run the .exe file and all it set and done!
 
 **Note 2:** Due to the nature of the project, i.e. automatically running commands to setup the task in the background, it may trigger false warnings from windows defender.
 
